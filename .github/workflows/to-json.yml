@@ -1,0 +1,12 @@
+name: JSON functions
+on: push
+jobs:
+    dump:
+        runs-on: ubnutu-latest
+        steps:
+            - name: Echo Pant Color
+              run: echo "${PANT_COLOR}"
+              env:
+                PANT_COLOR: ${{ toJSON(github) }}
+              
+        
